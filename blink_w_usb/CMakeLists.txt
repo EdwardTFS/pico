@@ -4,8 +4,11 @@ if (TARGET tinyusb_device)
             )
 
     # pull in common dependencies
-    target_link_libraries(blink_w_usb pico_stdlib)
-
+    target_link_libraries(blink_w_usb
+    pico_stdlib              # for core functionality
+    pico_cyw43_arch_none     # we need Wifi to access the GPIO, but we don't need anything else)
+    )
+    
     # enable usb output, disable uart output
     pico_enable_stdio_usb(blink_w_usb 1)
     pico_enable_stdio_uart(blink_w_usb 0)

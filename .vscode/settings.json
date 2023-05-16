@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "cyw43_arch.h": "c",
+        "stdio.h": "c"
     }
 }
